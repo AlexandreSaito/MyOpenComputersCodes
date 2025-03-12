@@ -1,0 +1,47 @@
+
+local component = require("component")
+local rb = component.robot
+local sides = require("sides")
+
+require("simpleMap.robotMovement")
+
+local robot = GetRobotObject()
+
+print("teste look")
+LookTo(robot, sides.back)
+os.sleep(1)
+LookTo(robot, sides.right)
+os.sleep(1)
+LookTo(robot, sides.left)
+os.sleep(1)
+LookTo(robot, sides.front)
+os.sleep(1)
+
+print()
+print("teste move")
+MoveX(robot, 1)
+MoveY(robot, 1)
+MoveZ(robot, 1)
+MoveX(robot, 0)
+MoveY(robot, 0)
+MoveZ(robot, 0)
+os.sleep(1)
+
+print()
+print("teste move TO")
+MoveToX(robot, 5)
+os.sleep(1)
+MoveToY(robot, 5)
+os.sleep(1)
+MoveToZ(robot, 2)
+os.sleep(1)
+MoveToX(robot, 0)
+os.sleep(1)
+MoveToY(robot, 0)
+os.sleep(1)
+
+print()
+print("teste moveTo")
+MoveTo(robot, 5, 5, 2)
+os.sleep(1)
+MoveTo(robot, 0, 0, 0)
